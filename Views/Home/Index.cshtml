@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Pet Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to @ViewData["Title"]</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Age</th>
+            <th>Has Fur</th>
+        </tr>
+        @foreach (Pet p in ViewBag.everyPet)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Type</td>
+                <td>@p.Age</td>
+                <td>@p.Fur</td>
+            </tr>
+        }
+
+    </table>
+
+    
+</div>
